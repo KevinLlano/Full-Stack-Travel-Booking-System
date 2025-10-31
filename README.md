@@ -263,12 +263,6 @@ This app is deployed on [Fly.io](https://fly.io/) with [Supabase](https://supaba
 
 **Live Demo**: [https://travelapp-damp-shape-6592.fly.dev/customer](https://travelapp-damp-shape-6592.fly.dev/customer)
 
-### AWS Lambda Deployment
-```bash
-cd aws-lambda
-terraform init
-terraform apply
-```
 
 ---
 
