@@ -1,19 +1,9 @@
-# Full-Stack Travel Ecommerce Shop
+# 🌍 Full-Stack Travel Ecommerce Shop
 
-## **Live Demo:**
-### [https://travelapp-damp-shape-6592.fly.dev/customer](https://travelapp-damp-shape-6592.fly.dev/customer)
+<div align="center">
 
-## 🚀 Project Highlights
-- Modern travel booking app (Angular + Spring Boot)
-- Secure checkout with order tracking
-- Responsive UI (Angular Material)
-- RESTful backend, MySQL database
-- Redis caching for optimized query performance
-- Docker-ready for cloud deployment
-- Event-driven booking processing with AWS Lambda and SQS
-- Serverless architecture for scalable order handling
+### **[🚀 Live Demo](https://travelapp-damp-shape-6592.fly.dev/customer)**
 
-## 🛠️ Tech Stack
 ![Angular](https://img.shields.io/badge/Angular-14-red?logo=angular)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green?logo=springboot)
 ![MySQL](https://img.shields.io/badge/MySQL-8-blue?logo=mysql)
@@ -23,216 +13,277 @@
 ![Amazon SQS](https://img.shields.io/badge/Amazon%20SQS-Queue-red?logo=amazonsqs)
 ![Terraform](https://img.shields.io/badge/Terraform-Infrastructure-blue?logo=terraform)
 
+*A modern, cloud-native travel booking platform with real-time caching, serverless architecture, and event-driven processing*
+
+</div>
+
+---
+
+## 📋 Table of Contents
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [Tech Stack](#️-tech-stack)
+- [Architecture Highlights](#-architecture-highlights)
+- [Screenshots](#-screenshots)
+- [Quick Start](#-quick-start)
+- [API Documentation](#-api-documentation)
+- [Project Structure](#-project-structure)
+- [Deployment](#-deployment)
+
+---
+
+## 🎯 Overview
+
+Full-stack travel shopping application built with enterprise-grade technologies. Users can browse vacation packages and excursions, manage shopping carts, and complete secure checkout flows. The backend exposes RESTful APIs with advanced caching, event-driven processing, and cloud-native deployment capabilities.
+
+**Why This Project?**
+- Demonstrates full-stack CRUD operations with real-world patterns
+- Implements database cascade deletes, CORS handling, and cloud deployment
+- Showcases modern DevOps practices with Docker, Terraform, and serverless architecture
+- Solves real-world e-commerce challenges with performance optimization and scalability
+
+---
+
+## ✨ Key Features
+
+### Core Functionality
+- 🏖️ **Vacation Browsing**: View vacation packages, excursion details, and dynamic pricing
+- 🛒 **Shopping Cart**: Add/remove excursions, update party size, see real-time totals
+- 👤 **Customer Management**: Full CRUD operations with cascading deletes
+- 💳 **Secure Checkout**: Complete purchase flow with order tracking
+
+### Advanced Features
+- ⚡ **Redis Caching**: 80% faster query response times with distributed caching
+- ☁️ **AWS Lambda Integration**: Serverless order processing with Python
+- 📨 **Event-Driven Architecture**: SQS message queue for decoupled operations
+- 🐳 **Docker-Ready**: Multi-stage builds for production deployment
+- 🔒 **Database Integrity**: FK constraints with ON DELETE CASCADE
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- **Framework**: Angular 14 with TypeScript
+- **UI Library**: Angular Material, Angular CDK, Flex Layout
+- **State Management**: RxJS for reactive data flows
+- **Testing**: Karma, Jasmine
+
+### Backend
+- **Framework**: Spring Boot 3 (Java 21)
+- **Data Access**: Spring Data JPA, Spring Data REST
+- **Validation**: Jakarta Bean Validation
+- **Caching**: Redis with Spring Cache abstraction
+- **Messaging**: AWS SDK for SQS integration
+
+### Database & Caching
+- **Primary Database**: MySQL 8 (InnoDB) / PostgreSQL
+- **Cache Layer**: Redis (distributed caching)
+- **Schema Management**: SQL migration scripts
+
+### Cloud & DevOps
+- **Serverless**: AWS Lambda (Python 3.9)
+- **Message Queue**: Amazon SQS
+- **Infrastructure as Code**: Terraform
+- **Containerization**: Docker (multi-stage builds)
+- **Deployment**: Fly.io with Supabase PostgreSQL
+
+### Build Tools
+- **Backend**: Maven
+- **Frontend**: Node.js, npm, Angular CLI
+
+---
+
+## 🏗️ Architecture Highlights
+
+### 🚀 Redis Caching for Performance Optimization
+- **Implementation**: Spring Boot with `@Cacheable` and `@CacheEvict` annotations
+- **Cache Strategy**: 10-minute TTL for vacation queries
+- **Invalidation**: Automatic eviction on POST, PUT, DELETE operations
+- **Performance Impact**: Up to 80% reduction in API response times
+- **Local Development**: Run via Docker with zero cloud costs
+
+```bash
+# Run Redis locally
+docker run -d --name redis-local -p 6379:6379 redis:latest
+```
+
+### ☁️ AWS Serverless Integration
+- **AWS Lambda (Python)**: Asynchronous booking order processing with logging, alerts, and analytics placeholders
+- **Amazon SQS**: Decouples order placement from processing for scalable event-driven architecture
+- **Terraform IaC**: Automated provisioning of SQS queues, Lambda functions, and IAM roles
+- **Java SQS Service**: Spring Boot integration for sending booking messages on order completion
+- **Fail-Safe Design**: SQS integration is optional—app functions normally without AWS
+
+### 🗄️ Database Architecture
+- **Referential Integrity**: Cascading deletes from `customers → carts → cart_items → excursion_cartitem`
+- **Entity Relationships**:
+  - `Customer (1) → (many) Cart`
+  - `Cart (1) → (many) CartItem`
+  - `CartItem (many) ↔ (many) Excursion` (join table)
+  - `Vacation (1) → (many) Excursion`
+
+---
+
 ## 📸 Screenshots
+
 ![alt text](image-1.png)
+*Vacation browsing interface with Angular Material design*
 
-Full-stack travel shopping app. The frontend (Angular) lets users browse vacations and excursions, manage a cart, and place orders. The backend (Spring Boot + MySQL) exposes REST APIs, persists data, and enforces referential integrity with cascading deletes.
+![alt text](image-3.png)
+*AWS Lambda and SQS event-driven architecture*
 
-## Tech Stack
-- Frontend: Angular 14, Angular Material, Angular CDK, Flex Layout, RxJS, TypeScript
-- Backend: Spring Boot 3, Spring Data JPA, Spring Data REST, Bean Validation (Jakarta Validation)
-- Database: MySQL 8 (InnoDB), SQL schema + seed scripts
-- Caching: Redis for distributed caching and query optimization
-- Build/Tooling: Maven, Node.js + npm, Angular CLI, TypeScript, Karma/Jasmine
-- Cloud/Serverless: AWS Lambda (Python 3.9), Amazon SQS, Terraform for Infrastructure as Code
+---
 
-## Project Structure
-- `client/` – Angular app (UI, services, models)
-- `demo/` – Spring Boot app (REST controllers, JPA entities, services)
+## ⚡ Quick Start
 
-## Backend Structure (prioritized)
-- `demo/src/main/resources/application.properties` – MySQL connection and Spring settings
-- `demo/src/main/java/com/assessment/demo/controllers/` – REST endpoints
-  - `CustomerController` (`/api/customers`) – CRUD + DELETE cascades via DB
-  - `VacationController` (`/api/vacations`) – list vacations
-  - `ExcursionController` (`/api/excursions`) – list excursions
-  - `CheckoutController` (`/api/checkout/purchase`) – place order
-- `demo/src/main/java/com/assessment/demo/entities/` – JPA entities mapped to tables
-  - `Customer`, `Cart`, `CartItem`, `Vacation`, `Excursion`, `Division`, `Country`, `StatusType`
-  - Relationships:
-    - `Customer (1) -> (many) Cart` (FK: `carts.customer_id`)
-    - `Cart (1) -> (many) CartItem` (FK: `cart_items.cart_id`)
-    - `CartItem (many) <-> (many) Excursion` via join table `excursion_cartitem`
-    - `Vacation (1) -> (many) Excursion` (FK: `excursions.vacation_id`)
-- `demo/src/main/java/com/assessment/demo/dao/` – Spring Data repositories
-  - `CustomerRepository`, `CartRepository`, `CartItemRepository`, etc.
-- `demo/src/main/java/com/assessment/demo/services/` – Business logic (checkout flow)
-  - `CheckoutService`, `CheckoutServiceImpl`, `Purchase`, `PurchaseResponse`
+### Prerequisites
+- Java 21+
+- Node.js 16+
+- Maven 3.8+
+- MySQL 8 / PostgreSQL (or use Supabase)
+- Docker (optional, for Redis)
 
-Key backend details to replicate
-- DB: MySQL 8 on `localhost:3306` with schema `full-stack-ecommerce`
-- Credentials: set in `application.properties` (`spring.datasource.*`)
-- Hibernate DDL: `spring.jpa.hibernate.ddl-auto=none` (DB created via SQL scripts or manually)
-- Base path: `spring.data.rest.base-path=/api` (all endpoints start with `/api`)
-- Cascades: ensure DB FKs use `ON DELETE CASCADE` for:
-  - `carts.customer_id` → customers.customer_id
-  - `cart_items.cart_id` → carts.cart_id
-  - `excursion_cartitem.cart_item_id` → cart_items.cart_item_id
-
-## Frontend Structure
-- `client/src/app/views/` – Routed pages (customers, vacations, excursions, cart)
-  - `view-customer/` – list, delete, and navigate to detail/edit
-  - `add-customer/`, `edit-customer/` – CRUD forms
-  - `vacation/`, `excursion/`, `excursion-detail/` – browse/select
-  - `cart/`, `cart-summary/`, `order-confirmation/`
-- `client/src/app/services/` – Shared services
-  - `purchase-data.service.ts` – in-memory cart and checkout data
-- `client/src/app/model/` – Typed models and API response shapes
-  - DTOs under `model/dto/`
-- `client/src/environments/` – API base URL and environment flags
-- Dev proxy: `client/proxy.conf.json` routes `/api` → `http://localhost:8080`
-
-Key frontend details to replicate
-- Angular CLI v14 project, `ng serve` uses proxy for `/api`
-- API calls target relative paths like `/api/customers`
-- Delete customer calls `DELETE /api/customers/{id}` and refreshes the list on success
-
-## Key Features
-- View vacations, excursion details, and pricing
-- Add excursions to a cart, update party size, see package total
-- Customer CRUD (add, view, edit, delete)
-- Checkout flow posts a purchase to the backend
-- Proxy setup for local dev: Angular `/api` → Spring Boot on port 8080
-- Safe deletes: DB-level ON DELETE CASCADE from customers → carts → cart_items → excursion_cartitem
-
-## 🚀 Redis Caching for Performance Optimization
-- **Redis Integration**: Implemented distributed caching to optimize database queries and reduce response times
-- **Vacation API Caching**: GET requests for vacations are cached with 10-minute TTL, significantly improving performance for repeated queries
-- **Cache Invalidation**: Automatic cache eviction on POST, PUT, and DELETE operations ensures data consistency
-- **Local Development**: Run Redis locally via Docker with zero cloud costs
-- **Performance Impact**: Reduces vacation API response times by up to 80% for cached queries
-- **Configuration**: `spring-boot-starter-data-redis` with `@Cacheable` and `@CacheEvict` annotations
-
-**To run Redis locally:**
+### 1. Start Redis (Optional)
 ```bash
 docker run -d --name redis-local -p 6379:6379 redis:latest
 ```
 
-## ☁️ AWS Integration
-- **AWS Lambda (Python)**: Serverless function for asynchronous booking order processing, including logging, alerts, and placeholders for email confirmations and analytics
-- **Amazon SQS**: Message queue for decoupling order placement from processing, enabling scalable event-driven architecture
-- **Terraform**: Infrastructure as Code for provisioning and managing AWS resources (SQS queue, Lambda function, IAM roles)
-- **Java SQS Service**: Added `SqsService` to Spring Boot backend for sending booking messages to SQS upon order completion
-- **Project Changes**: Updated `CheckoutController` to integrate SQS messaging, added AWS SDK dependency to `pom.xml`, created separate `aws-lambda/` directory with Terraform configuration and Python Lambda code
-
-![alt text](image-3.png)
-
-## APIs (examples)
-- `GET /api/customers` – list customers
-- `GET /api/customers/{id}` – get a customer
-- `POST /api/customers` – create (DTO expected)
-- `PUT /api/customers/{id}` – update
-- `DELETE /api/customers/{id}` – delete (cascades through carts/items)
-- `GET /api/vacations`, `GET /api/excursions` – browse data
-- `POST /api/checkout/purchase` – place an order
-
-## ⚡ Quick Start
+### 2. Start Backend
 ```bash
-# Backend
 cd demo
 mvn spring-boot:run
-
-# Frontend
-cd ../client
-npm install
-ng serve --proxy-config proxy.conf.json
 ```
-Backend: http://localhost:8080
-Frontend: http://localhost:4200
-API calls to `/api/...` are proxied to the backend
+Backend runs on: http://localhost:8080
 
-## Common Commands
-Frontend
+### 3. Start Frontend
 ```bash
 cd client
 npm install
 ng serve --proxy-config proxy.conf.json
-ng build
-ng test
 ```
-Backend
+Frontend runs on: http://localhost:4200
+
+API calls to `/api/*` are automatically proxied to the backend.
+
+---
+
+## 📚 API Documentation
+
+### Customer Endpoints
+- `GET /api/customers` – List all customers
+- `GET /api/customers/{id}` – Get customer by ID
+- `POST /api/customers` – Create new customer
+- `PUT /api/customers/{id}` – Update customer
+- `DELETE /api/customers/{id}` – Delete customer (cascades to carts/items)
+
+### Vacation & Excursion Endpoints
+- `GET /api/vacations` – List all vacation packages (cached)
+- `GET /api/vacations/{id}` – Get vacation by ID (cached)
+- `GET /api/excursions` – List all excursions
+
+### Checkout
+- `POST /api/checkout/purchase` – Complete purchase and trigger order processing
+
+---
+
+## 📁 Project Structure
+
+```
+travelapp/
+├── client/                          # Angular frontend
+│   ├── src/app/
+│   │   ├── views/                   # Routed components (customers, vacations, cart)
+│   │   ├── services/                # Shared services (purchase-data.service.ts)
+│   │   ├── model/                   # TypeScript models and DTOs
+│   │   └── app-routing.module.ts    # Route configuration
+│   ├── proxy.conf.json              # Dev proxy: /api → localhost:8080
+│   └── angular.json
+│
+├── demo/                            # Spring Boot backend
+│   ├── src/main/java/com/assessment/demo/
+│   │   ├── controllers/             # REST endpoints
+│   │   │   ├── CustomerController.java
+│   │   │   ├── VacationController.java (with Redis caching)
+│   │   │   ├── ExcursionController.java
+│   │   │   └── CheckoutController.java
+│   │   ├── entities/                # JPA entities
+│   │   ├── dao/                     # Spring Data repositories
+│   │   ├── services/                # Business logic
+│   │   │   ├── CheckoutService.java
+│   │   │   └── SqsService.java      # AWS SQS integration
+│   │   └── config/
+│   │       └── RedisConfig.java     # Redis caching configuration
+│   ├── src/main/resources/
+│   │   ├── application.properties   # Database, Redis, SQS config
+│   │   └── postgres-init.sql        # Database schema
+│   └── pom.xml                      # Maven dependencies
+│
+├── aws-lambda/                      # Serverless infrastructure
+│   ├── main.tf                      # Terraform AWS resources
+│   ├── lambda_function.py           # Python Lambda for order processing
+│   ├── requirements.txt
+│   └── README.md
+│
+├── Dockerfile                       # Multi-stage Docker build
+├── fly.toml                         # Fly.io deployment config
+└── README.md
+```
+
+### Backend Key Components
+- **Controllers**: REST endpoints with `@RestController` and caching annotations
+- **Entities**: JPA entities with relationships and cascade settings
+- **Services**: Business logic for checkout, SQS messaging, and order processing
+- **Config**: Redis caching, Spring Data REST base path (`/api`)
+
+### Frontend Key Components
+- **Views**: Angular components for each page (customer list, vacation detail, cart)
+- **Services**: `purchase-data.service.ts` for in-memory cart state
+- **Models**: TypeScript interfaces matching backend DTOs
+- **Proxy**: Dev proxy routes `/api` requests to backend
+
+---
+
+## 🚀 Deployment
+
+### Fly.io with Supabase (Production)
+This app is deployed on [Fly.io](https://fly.io/) with [Supabase](https://supabase.com/) PostgreSQL.
+
+**Setup Steps:**
+1. Create Supabase project and run SQL seed script
+2. Install Fly CLI and authenticate: `fly auth login`
+3. Initialize: `fly launch --no-deploy`
+4. Set secrets:
+   ```bash
+   fly secrets set SPRING_DATASOURCE_URL="jdbc:postgresql://..."
+   fly secrets set SPRING_DATASOURCE_USERNAME="postgres"
+   fly secrets set SPRING_DATASOURCE_PASSWORD="your-password"
+   ```
+5. Deploy: `fly deploy`
+
+**Live Demo**: [https://travelapp-damp-shape-6592.fly.dev/customer](https://travelapp-damp-shape-6592.fly.dev/customer)
+
+### AWS Lambda Deployment
 ```bash
-cd demo
-mvn spring-boot:run
-mvn test
+cd aws-lambda
+terraform init
+terraform apply
 ```
 
-
-## Database Setup Options
-- Use existing local MySQL schema (recommended for dev). Ensure these FKs have cascades:
-  - `carts.customer_id` → customers.customer_id ON DELETE CASCADE
-  - `cart_items.cart_id` → carts.cart_id ON DELETE CASCADE
-  - `excursion_cartitem.cart_item_id` → cart_items.cart_item_id ON DELETE CASCADE
-- Or initialize from SQL scripts:
-  - Copy a schema file into `demo/src/main/resources/database/schema.sql`
-  - In `application.properties` set:
-    ```properties
-    spring.jpa.hibernate.ddl-auto=none
-    spring.sql.init.mode=always
-    spring.sql.init.schema-locations=classpath:database/schema.sql
-    ```
-  - Restart the backend; Spring Boot will run the script
+---
 
 
 
-# 💡 Why This Project?
-- Built full-stack CRUD with real-world patterns
-- Learned database cascade deletes, CORS, and deployment
-- Built an e-commerce replica that focused on a fun, travel-themed workflow.
-- Wanted to dive deeper into Angular integration with the backend.
-- Overall, it solves a problem, which I highly value.
 
 
 
-## Developer Tips
-- Angular environment: `client/src/environments/environment.ts`
-- Proxy: `client/proxy.conf.json` (already wired in `angular.json` dev serve)
-- Data models/DTOs: `client/src/app/model` and `client/src/app/model/dto`
-- Purchase data service (cart state): `client/src/app/services/purchase-data.service.ts`
-- Controllers (backend): `demo/src/main/java/com/assessment/demo/controllers`
-- Entities (backend): `demo/src/main/java/com/assessment/demo/entities`
+<div align="center">
 
+**Built with ❤️ by KevinLlano**
 
-# Deploying to Fly.io (PostgreSQL + Angular + Spring Boot)
+[Live Demo](https://travelapp-damp-shape-6592.fly.dev/customer) • [GitHub](https://github.com/KevinLlano/Full-Stack-Travel-Ecommerce)
 
-## 1. Prerequisites
-- Fly CLI installed: https://travelapp-damp-shape-6592.fly.dev/customer
-- Account logged in:
-```
-fly auth login
-```
-- PostgreSQL launch (managed) after app bootstrap.
-
-## 2. First-time init
-From repository root:
-```
-fly launch --no-deploy
-```
-When prompted:
-- Use existing Dockerfile: yes
-- Set app name (or keep generated)
-- Do NOT create a Postgres DB yet (we'll attach after confirming build) *or* allow wizard to create it; either works.
-
-
-
-# ---
-
-#  🚀 Deployment & Supabase Setup
-#
-This app is deployed on [Fly.io](https://fly.io/) and uses [Supabase](https://supabase.com/) for free PostgreSQL hosting.
-#
-# **Supabase Setup:**
- - Create a new Supabase project and database.
- - Run the provided SQL seed script to initialize schema and sample data.
-#- Copy your Supabase connection string, username, and password.
-
-# **Fly.io Deployment:**
-#- The backend and frontend are bundled together using a multi-stage Dockerfile.
-#- Environment variables for database connection (`SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`) are set in Fly.io secrets to connect to Supabase.
-
-
-# **Live Demo:**
-- [https://travelapp-damp-shape-6592.fly.dev/customer](https://travelapp-damp-shape-6592.fly.dev/customer)
+</div>
 
 
 
