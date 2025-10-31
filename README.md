@@ -2,7 +2,7 @@
 
 <div align="center">
 
-### **[🚀 Live Demo](https://travelapp-damp-shape-6592.fly.dev/customer)**
+## **[🚀 Live Demo](https://travelapp-damp-shape-6592.fly.dev/customer)**
 
 ![Angular](https://img.shields.io/badge/Angular-14-red?logo=angular)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green?logo=springboot)
