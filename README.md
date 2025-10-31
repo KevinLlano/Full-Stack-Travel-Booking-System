@@ -1,4 +1,4 @@
-# 🌍 Full-Stack Travel Ecommerce Shop
+# 🌍 Full-Stack Travel Booking System
 
 <div align="center">
 
