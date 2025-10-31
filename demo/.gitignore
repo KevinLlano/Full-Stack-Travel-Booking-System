@@ -4,6 +4,10 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+# Sensitive configuration files
+src/main/resources/application.properties
+src/main/resources/application-*.properties
+
 # AWS Configuration (if using local credentials)
 *.pem
 *.key
