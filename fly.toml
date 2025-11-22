@@ -6,12 +6,20 @@ primary_region = 'dfw'
 [http_service]
   internal_port = 8080
   force_https = true
+  # Keep app running so there are no cold starts for visitors (always-on)
   auto_stop_machines = false
   auto_start_machines = true
+  # Keep at least 1 machine always running to avoid request cold start delays
   min_machines_running = 1
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
+  # Lower memory for cost optimization; 512mb is a good compromise for Spring Boot VMs
+  memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
+
+[env]
+# Limit JVM heap and enable container resource support to help the JVM run in 512MB
+# These settings are conservative; adjust if you experience OOMs or performance issues
+  JAVA_TOOL_OPTIONS = "-Xms256m -Xmx384m -XX:+UseContainerSupport -XX:MaxRAMPercentage=70"
