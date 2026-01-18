@@ -15,6 +15,8 @@ C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\d
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\dao\ExcursionRepository.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\dao\CountryRepository.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\entities\Vacation.java
+C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\web\SpaController.java
+C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\config\RedisConfig.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\entities\CartItem.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\CountryController.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\entities\Cart.java
@@ -22,6 +24,7 @@ C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\d
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\ExcursionController.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\Bootstrap.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\VacationController.java
+C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\services\SqsService.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\config\RestDataConfig.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\dto\Purchase.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\dao\DivisionRepository.java

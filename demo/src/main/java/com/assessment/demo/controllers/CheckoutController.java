@@ -30,15 +30,15 @@ public class CheckoutController {
         try {
             String customerName = purchase.getCustomer().getFirstName() + " " + 
                                  purchase.getCustomer().getLastName();
-            String vacationTitle = purchase.getCart().getCartItems().isEmpty() 
-                ? "N/A" 
+            String vacationTitle = (purchase.getCart().getCartItem() == null || purchase.getCart().getCartItem().isEmpty())
+                ? "N/A"
                 : "Vacation Package"; // Simplified - adjust based on your cart structure
             
             String message = sqsService.formatBookingMessage(
                 response.getOrderTrackingNumber(),
                 customerName,
                 vacationTitle,
-                purchase.getCart().getPackagePrice()
+                purchase.getCart().getPackage_price().doubleValue()
             );
             
             sqsService.sendBookingMessage(message);
