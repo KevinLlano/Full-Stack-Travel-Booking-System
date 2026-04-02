@@ -36,3 +36,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore environment variable files
+.env
+.env.*
+
+# Terraform variable files
+terraform.tfvars
+*.auto.tfvars

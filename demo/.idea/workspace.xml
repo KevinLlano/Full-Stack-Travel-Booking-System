@@ -5,16 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0eb69f4-c689-4e0e-9bd7-9d22f8be0ec0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/fly.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/assessment/demo/controllers/CheckoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/assessment/demo/controllers/CheckoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/assessment/demo/controllers/VacationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/assessment/demo/controllers/VacationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/assessment/demo/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/assessment/demo/Bootstrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/assessment/demo/controllers/ExcursionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/assessment/demo/controllers/ExcursionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/postgres-init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/postgres-init.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/Bootstrap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/Bootstrap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/config/CorsConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/config/RestDataConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/config/RestDataConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CheckoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CheckoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CountryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CountryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController$CustomerDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController$CustomerDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController$DivisionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController$DivisionDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/DivisionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/DivisionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/ExcursionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/ExcursionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/VacationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/VacationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CartItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CartItemRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CartRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CartRepository.class" afterDir="false" />
@@ -33,13 +45,37 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Vacation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Vacation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/services/CheckoutService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/services/CheckoutService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/services/CheckoutServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/services/CheckoutServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/assessment/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/assessment/demo/DemoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Projects/Personal Java Projects/travelapp/demo" value="32ZKKOavD6S5ImSZa7wPHZOnqAF" />
+    </persistenceIdMap>
+  </component>
+  <component name="CopilotUserSelectedChatMode">
+    <option name="chatModeId" value="Agent" />
+  </component>
+  <component name="CopilotUserSelectedModel">
+    <selectedModels>
+      <entry key="edit-panel" value="GPT-5 mini" />
+      <entry key="chat-panel" value="GPT-4.1" />
+      <entry key="agent-panel" value="GPT-4.1" />
+    </selectedModels>
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="74" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,6 +87,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/6.1.13/spring-beans-6.1.13.jar!/org/springframework/beans/factory/UnsatisfiedDependencyException.class" root0="SKIP_INSPECTION" />
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -61,6 +100,13 @@
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -77,13 +123,16 @@
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;Spring Boot.DemoApplication.executor&quot;: &quot;Run&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactor/excursion-oop-exception-logging&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Projects/Personal Java Projects/travelapp/demo&quot;,
@@ -92,7 +141,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -132,12 +184,15 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.29188.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.29188.11" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.32098.37" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a0eb69f4-c689-4e0e-9bd7-9d22f8be0ec0" name="Changes" comment="" />
@@ -149,11 +204,54 @@
       <workItem from="1761869741584" duration="2738000" />
       <workItem from="1761875047417" duration="2972000" />
       <workItem from="1763853440331" duration="112000" />
+      <workItem from="1769116746055" duration="4616000" />
+      <workItem from="1769140622000" duration="13211000" />
+      <workItem from="1769189394879" duration="837000" />
+      <workItem from="1769190249603" duration="5197000" />
+      <workItem from="1769196893706" duration="10837000" />
+      <workItem from="1770660254500" duration="6507000" />
+      <workItem from="1770670934297" duration="466000" />
+      <workItem from="1770671465192" duration="434000" />
+      <workItem from="1770671915571" duration="775000" />
+      <workItem from="1770672712969" duration="101000" />
+      <workItem from="1770672830775" duration="1363000" />
+      <workItem from="1770674560335" duration="490000" />
+      <workItem from="1770676026467" duration="738000" />
+      <workItem from="1770676823252" duration="3567000" />
+      <workItem from="1770733600115" duration="15629000" />
+      <workItem from="1770816862418" duration="15599000" />
+      <workItem from="1770839475261" duration="386000" />
+      <workItem from="1774298591442" duration="22117000" />
+      <workItem from="1774472424265" duration="1510000" />
+      <workItem from="1774532221812" duration="3017000" />
+      <workItem from="1774818019021" duration="10000" />
+      <workItem from="1774820891723" duration="2590000" />
+      <workItem from="1774967233812" duration="8418000" />
+      <workItem from="1774991145852" duration="7400000" />
+      <workItem from="1775050225389" duration="13028000" />
+      <workItem from="1775136338196" duration="7618000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="executable:terraform" />
+    <option featureType="dependencySupport" implementationName="java:javax.validation:validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-messaging" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -168,5 +266,13 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
   </component>
 </project>

@@ -14,6 +14,7 @@ com\assessment\demo\dao\ExcursionRepository.class
 com\assessment\demo\controllers\ApiResponseHelper.class
 com\assessment\demo\dao\CartRepository.class
 com\assessment\demo\DemoApplication.class
+com\assessment\demo\config\RedisConfig.class
 com\assessment\demo\services\CheckoutServiceImpl.class
 com\assessment\demo\dto\Purchase.class
 com\assessment\demo\entities\Vacation.class
@@ -22,11 +23,16 @@ com\assessment\demo\entities\Customer.class
 com\assessment\demo\controllers\CustomerController.class
 com\assessment\demo\controllers\DivisionController.class
 com\assessment\demo\controllers\ExcursionController.class
+com\assessment\demo\services\VacationEmbeddingService.class
 com\assessment\demo\dao\VacationRepository.class
 com\assessment\demo\dao\CartItemRepository.class
+com\assessment\demo\config\AiConfig.class
 com\assessment\demo\config\CorsConfig.class
 com\assessment\demo\config\RestDataConfig.class
 com\assessment\demo\controllers\VacationController.class
 com\assessment\demo\services\CheckoutService.class
 com\assessment\demo\entities\Division.class
+com\assessment\demo\web\SpaController.class
+com\assessment\demo\services\SqsService.class
+com\assessment\demo\controllers\AiController.class
 com\assessment\demo\entities\Excursion.class

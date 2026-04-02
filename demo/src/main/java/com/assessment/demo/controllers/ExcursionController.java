@@ -61,6 +61,7 @@ public class ExcursionController {
         return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(response);
     }
 
+
     // Alternative endpoint for getting excursions by vacation (REST style)
     @GetMapping(value = "/vacation/{vacationId}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, Object>> getExcursionsByVacation(@PathVariable Long vacationId) {
@@ -92,9 +93,9 @@ public class ExcursionController {
     public ResponseEntity<Excursion> updateExcursion(@PathVariable Long id, @RequestBody Excursion excursionDetails) {
         return excursionRepository.findById(id)
                 .map(excursion -> {
-                    excursion.setExcursion_title(excursionDetails.getExcursion_title());
-                    excursion.setExcursion_price(excursionDetails.getExcursion_price());
-                    excursion.setImage_URL(excursionDetails.getImage_URL());
+                    excursion.setExcursionTitle(excursionDetails.getExcursionTitle());
+                    excursion.setExcursionPrice(excursionDetails.getExcursionPrice());
+                    excursion.setImageUrl(excursionDetails.getImageUrl());
                     excursion.setVacation(excursionDetails.getVacation());
                     Excursion updatedExcursion = excursionRepository.save(excursion);
                     return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(updatedExcursion);

@@ -2,6 +2,9 @@
 
 BEGIN;
 
+-- Enable pgvector extension for AI embeddings (requires PostgreSQL with pgvector installed)
+CREATE EXTENSION IF NOT EXISTS vector;
+
 -- Drop tables in reverse dependency order
 DROP TABLE IF EXISTS excursion_cartitem CASCADE;
 DROP TABLE IF EXISTS cart_items CASCADE;

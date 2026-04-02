@@ -1,4 +1,5 @@
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\ApiResponseHelper.java
+C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\config\AiConfig.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\CheckoutController.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\CustomerController.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\DemoApplication.java
@@ -6,6 +7,7 @@ C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\d
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\services\CheckoutService.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\dto\PurchaseResponse.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\dao\CartItemRepository.java
+C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\AiController.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\entities\Excursion.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\DivisionController.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\entities\Customer.java
@@ -17,6 +19,7 @@ C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\d
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\entities\Vacation.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\web\SpaController.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\config\RedisConfig.java
+C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\services\VacationEmbeddingService.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\entities\CartItem.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\controllers\CountryController.java
 C:\Projects\Personal Java Projects\travelapp\demo\src\main\java\com\assessment\demo\entities\Cart.java

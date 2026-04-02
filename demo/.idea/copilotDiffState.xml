@@ -3,6 +3,15 @@
   <component name="CopilotDiffPersistence">
     <option name="pendingDiffs">
       <map>
+        <entry key="/main (snapshot).tf">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/main (snapshot).tf" />
+              <option name="originalContent" value="# Terraform configuration for budget Jenkins backend pipeline EC2 instance&#10;# Spot instance, t3.micro, minimal setup&#10;&#10;provider &quot;aws&quot; {&#10;  region = &quot;us-east-1&quot; # Change if needed&#10;}&#10;&#10;resource &quot;aws_instance&quot; &quot;jenkins_backend_spot&quot; {&#10;  ami           = &quot;ami-0c94fe40f70e228bc&quot; # Use your preferred public AMI&#10;  instance_type = &quot;t3.micro&quot;&#10;&#10;  instance_market_options {&#10;    market_type = &quot;spot&quot;&#10;    spot_options {&#10;      # Optional: set max_price, interruption_behavior, etc.&#10;      # max_price = &quot;0.01&quot;&#10;      # interruption_behavior = &quot;terminate&quot;&#10;    }&#10;  }&#10;&#10;  # Add your key_name, security_groups, etc. as needed&#10;  # key_name = &quot;your-key&quot;&#10;  # vpc_security_group_ids = [&quot;sg-xxxxxxx&quot;]&#10;&#10;  tags = {&#10;    Name = &quot;jenkins-backend-spot&quot;&#10;  }&#10;}&#10;&#10;" />
+              <option name="updatedContent" value="# Terraform configuration for budget Jenkins backend pipeline EC2 instance&#10;# Spot instance, t3.micro, minimal setup&#10;&#10;# (Provider block moved to provider.tf)&#10;&#10;resource &quot;aws_instance&quot; &quot;jenkins_backend_spot&quot; {&#10;  ami           = &quot;ami-0c94fe40f70e228bc&quot; # Use your preferred public AMI&#10;  instance_type = &quot;t3.micro&quot;&#10;  &#10;  # Enterprise standard: attach IAM role to instance, no hardcoded keys needed inside!&#10;  iam_instance_profile = aws_iam_instance_profile.jenkins_profile.name&#10;&#10;  instance_market_options {&#10;    market_type = &quot;spot&quot;&#10;    spot_options {&#10;      # Optional: set max_price, interruption_behavior, etc.&#10;      # max_price = &quot;0.01&quot;&#10;      # interruption_behavior = &quot;terminate&quot;&#10;    }&#10;  }&#10;&#10;  # Add your key_name, security_groups, etc. as needed&#10;  # key_name = &quot;your-key&quot;&#10;  # vpc_security_group_ids = [&quot;sg-xxxxxxx&quot;]&#10;&#10;  tags = {&#10;    Name = &quot;jenkins-backend-spot&quot;&#10;  }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/fix-foreign-keys.sql">
           <value>
             <PendingDiffInfo>

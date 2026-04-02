@@ -145,9 +145,9 @@ public class Bootstrap implements CommandLineRunner {
 
     private void createExcursion(String title, BigDecimal price, String imageUrl, Vacation vacation) {
         Excursion excursion = new Excursion();
-        excursion.setExcursion_title(title);
-        excursion.setExcursion_price(price);
-        excursion.setImage_URL(imageUrl);
+        excursion.setExcursionTitle(title);
+        excursion.setExcursionPrice(price);
+        excursion.setImageUrl(imageUrl);
         excursion.setVacation(vacation);
         excursionRepository.save(excursion);
     }
