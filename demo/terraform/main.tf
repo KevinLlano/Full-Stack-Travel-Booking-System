@@ -1,4 +1,3 @@
-
 resource "aws_instance" "jenkins_backend_spot" {
   ami           = "ami-0c94fe40f70e228bc" # public AMI
   instance_type = "t3.micro"
@@ -16,4 +15,11 @@ resource "aws_instance" "jenkins_backend_spot" {
   tags = {
     Name = "jenkins-backend-spot"
   }
+  root_block_device {
+    volume_size = 6
+    volume_type = "gp3"
+    delete_on_termination = true
+  }
+
+  user_data = file("${path.module}/scripts/install_jenkins.sh")
 }
