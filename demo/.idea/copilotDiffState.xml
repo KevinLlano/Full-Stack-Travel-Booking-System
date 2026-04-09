@@ -3,6 +3,14 @@
   <component name="CopilotDiffPersistence">
     <option name="pendingDiffs">
       <map>
+        <entry key="/iam (snapshot).tf">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/iam (snapshot).tf" />
+              <option name="updatedContent" value="data &quot;aws_iam_policy_document&quot; &quot;jenkins_assume_role_policy&quot; {&#10;  statement {&#10;    actions = [&quot;sts:AssumeRole&quot;]&#10;    principals {&#10;      type        = &quot;Service&quot;&#10;      identifiers = [&quot;ec2.amazonaws.com&quot;]&#10;    }&#10;  }&#10;}&#10;&#10;resource &quot;aws_iam_role&quot; &quot;jenkins_role&quot; {&#10;  name = &quot;jenkins-backend-role&quot;&#10;  assume_role_policy = data.aws_iam_policy_document.jenkins_assume_role_policy.json&#10;}&#10;&#10;resource &quot;aws_iam_instance_profile&quot; &quot;jenkins_profile&quot; {&#10;  name = &quot;jenkins-backend-profile&quot;&#10;  role = aws_iam_role.jenkins_role.name&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
         <entry key="/main (snapshot).tf">
           <value>
             <PendingDiffInfo>

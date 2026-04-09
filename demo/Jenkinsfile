@@ -1,0 +1,23 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        // Build the Maven project (Java backend)
+        sh 'mvn clean install'
+      }
+    }
+    stage('Trivy Scan') {
+      steps {
+        // Scan the workspace for vulnerabilities
+        sh 'trivy fs .'
+      }
+    }
+    stage('OWASP Dependency-Check') {
+      steps {
+        // Run OWASP Dependency-Check (adjust project name as needed)
+        sh 'dependency-check.sh --project DemoApp --scan .'
+      }
+    }
+  }
+}
