@@ -21,8 +21,13 @@ resource "aws_instance" "jenkins_backend_spot" {
     delete_on_termination = true
   }
 
-  user_data = file("${path.module}/scripts/run_jenkins_docker.sh")
+  user_data = templatefile("${path.module}/scripts/run_jenkins_docker.sh", {
+    region  = data.aws_region.current.name,
+    ecr_url = aws_ecr_repository.jenkins.repository_url
+  })
 }
+
+data "aws_region" "current" {}
 
 resource "aws_ecr_repository" "jenkins" {
   name                 = "jenkins"

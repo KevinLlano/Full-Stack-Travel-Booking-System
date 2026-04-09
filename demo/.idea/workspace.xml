@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a0eb69f4-c689-4e0e-9bd7-9d22f8be0ec0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jenkins/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/jenkins/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/terraform/main.tf" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/main.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/scripts/run_jenkins_docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/scripts/run_jenkins_docker.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +27,8 @@
   <component name="CopilotUserSelectedModel">
     <selectedModels>
       <entry key="edit-panel" value="GPT-5 mini" />
-      <entry key="chat-panel" value="GPT-4.1" />
-      <entry key="agent-panel" value="GPT-4.1" />
+      <entry key="chat-panel" value="GPT-5.3-Codex" />
+      <entry key="agent-panel" value="GPT-5.3-Codex" />
     </selectedModels>
   </component>
   <component name="EmbeddingIndexingInfo">
@@ -196,7 +197,7 @@
       <workItem from="1775570282213" duration="20423000" />
       <workItem from="1775679862941" duration="671000" />
       <workItem from="1775691241837" duration="2562000" />
-      <workItem from="1775740329264" duration="1993000" />
+      <workItem from="1775740329264" duration="13744000" />
     </task>
     <servers />
   </component>
