@@ -19,7 +19,8 @@ resource "aws_instance" "jenkins_backend_spot" {
   instance_type = "t3.micro"
 
   # Enterprise standard:
-  iam_instance_profile = aws_iam_instance_profile.jenkins_profile.name
+  iam_instance_profile   = aws_iam_instance_profile.jenkins_profile.name
+  vpc_security_group_ids = [aws_security_group.jenkins_sg.id]
 
   instance_market_options {
     market_type = "spot"
@@ -41,6 +42,27 @@ resource "aws_instance" "jenkins_backend_spot" {
     region  = data.aws_region.current.id,
     ecr_url = aws_ecr_repository.jenkins.repository_url
   })
+}
+
+resource "aws_security_group" "jenkins_sg" {
+  name        = "jenkins_sg"
+  description = "Security group for Jenkins EC2"
+
+  ingress {
+    description = "Allow Jenkins Web UI"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # Restrict to a specific VPN/office IP CIDR instead of 0.0.0.0/0 in production!
+  }
+
+  egress {
+    description = "Allow all outbound traffic"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }
 
 data "aws_region" "current" {}
