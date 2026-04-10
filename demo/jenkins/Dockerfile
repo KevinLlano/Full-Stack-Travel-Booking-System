@@ -4,12 +4,14 @@ FROM jenkins/jenkins:lts
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN jenkins-plugin-cli --plugin-file /usr/share/jenkins/ref/plugins.txt
 
-# Install Trivy
+# Install Trivy with scoped repository key (apt-key is deprecated)
 USER root
 RUN apt-get update && \
-	apt-get install -y wget unzip curl && \
-	wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-key add - && \
-	echo "deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -cs) main" > /etc/apt/sources.list.d/trivy.list && \
+	apt-get install -y wget unzip curl gnupg ca-certificates && \
+	install -m 0755 -d /etc/apt/keyrings && \
+	curl -fsSL https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor -o /etc/apt/keyrings/trivy.gpg && \
+	chmod a+r /etc/apt/keyrings/trivy.gpg && \
+	echo "deb [signed-by=/etc/apt/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb bookworm main" > /etc/apt/sources.list.d/trivy.list && \
 	apt-get update && apt-get install -y trivy && \
 	rm -rf /var/lib/apt/lists/*
 
@@ -26,4 +28,3 @@ EXPOSE 8080 50000
 
 # Default Jenkins home volume
 VOLUME /var/jenkins_home
-
