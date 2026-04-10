@@ -1,5 +1,21 @@
+# Get the latest Amazon Linux 2023 AMI (enterprise best practice)
+data "aws_ami" "latest_amazon_linux_2023" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["al2023-ami-2023.*-x86_64"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
 resource "aws_instance" "jenkins_backend_spot" {
-  ami           = "ami-0c94fe40f70e228bc" # public AMI
+  ami           = data.aws_ami.latest_amazon_linux_2023.id
   instance_type = "t3.micro"
 
   # Enterprise standard:
@@ -16,13 +32,13 @@ resource "aws_instance" "jenkins_backend_spot" {
     Name = "jenkins-backend-spot"
   }
   root_block_device {
-    volume_size = 6
+    volume_size = 8
     volume_type = "gp3"
     delete_on_termination = true
   }
 
   user_data = templatefile("${path.module}/scripts/run_jenkins_docker.sh", {
-    region  = data.aws_region.current.name,
+    region  = data.aws_region.current.id,
     ecr_url = aws_ecr_repository.jenkins.repository_url
   })
 }
