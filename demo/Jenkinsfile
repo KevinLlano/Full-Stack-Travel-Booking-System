@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         // Build the Maven project (Java backend)
-        sh 'mvn clean install'
+        sh './mvnw clean install'
       }
     }
     stage('Trivy Scan') {
