@@ -3,6 +3,15 @@
   <component name="CopilotDiffPersistence">
     <option name="pendingDiffs">
       <map>
+        <entry key="/Jenkinsfile (snapshot)">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/Jenkinsfile (snapshot)" />
+              <option name="originalContent" value="pipeline {&#10;  agent any&#10;  stages {&#10;    stage('Build') {&#10;      steps {&#10;        // Build the Maven project (Java backend)&#10;        sh 'mvn clean install'&#10;      }&#10;    }&#10;    stage('Trivy Scan') {&#10;      steps {&#10;        // Scan the workspace for vulnerabilities&#10;        sh 'trivy fs .'&#10;      }&#10;    }&#10;    stage('OWASP Dependency-Check') {&#10;      steps {&#10;        // Run OWASP Dependency-Check (adjust project name as needed)&#10;        sh 'dependency-check.sh --project DemoApp --scan .'&#10;      }&#10;    }&#10;  }&#10;}&#10;" />
+              <option name="updatedContent" value="pipeline {&#10;  agent any&#10;  stages {&#10;    stage('Build') {&#10;      steps {&#10;        // Build the Maven project (Java backend)&#10;        sh './mvnw clean install'&#10;      }&#10;    }&#10;    stage('Trivy Scan') {&#10;      steps {&#10;        // Scan the workspace for vulnerabilities&#10;        sh 'trivy fs .'&#10;      }&#10;    }&#10;    stage('OWASP Dependency-Check') {&#10;      steps {&#10;        // Run OWASP Dependency-Check (adjust project name as needed)&#10;        sh 'dependency-check.sh --project DemoApp --scan .'&#10;      }&#10;    }&#10;  }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
         <entry key="/application-mysql (snapshot).properties">
           <value>
             <PendingDiffInfo>
@@ -35,6 +44,24 @@
               <option name="filePath" value="/provider (snapshot).tf" />
               <option name="originalContent" value="provider &quot;aws&quot; {&#10;  region  = &quot;us-east-1&quot;&#10;  # AWS Identity Center for SSO/Single Sign-on&#10;  profile = &quot;dev&quot;&#10;}&#10;" />
               <option name="updatedContent" value="provider &quot;aws&quot; {&#10;  region  = &quot;us-east-1&quot;&#10;  # Using default local profile from aws configure&#10;  profile = &quot;default&quot;&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="/run_jenkins_docker (snapshot).sh">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="/run_jenkins_docker (snapshot).sh" />
+              <option name="originalContent" value="#!/bin/bash&#10;set -e&#10;&#10;yum update -y&#10;yum install -y docker&#10;systemctl enable docker&#10;systemctl start docker&#10;&#10;# Login to ECR dynamically passed by Terraform&#10;aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${ecr_url}&#10;&#10;# Pull Jenkins image from ECR&#10;docker pull ${ecr_url}:latest&#10;&#10;# Run Jenkins container&#10;docker run -d -p 8080:8080 -p 50000:50000 \&#10;  --name jenkins \&#10;  -v /var/jenkins_home:/var/jenkins_home \&#10;  ${ecr_url}:latest&#10;" />
+              <option name="updatedContent" value="#!/bin/bash&#10;set -e&#10;&#10;yum update -y&#10;yum install -y docker&#10;systemctl enable docker&#10;systemctl start docker&#10;&#10;# Login to ECR dynamically passed by Terraform&#10;aws ecr get-login-password --region ${region} | docker login --username AWS --password-stdin ${ecr_url}&#10;&#10;# Pull Jenkins image from ECR&#10;docker pull ${ecr_url}:latest&#10;&#10;# Ensure Jenkins user has permissions for the volume&#10;mkdir -p /var/jenkins_home&#10;chown -R 1000:1000 /var/jenkins_home&#10;&#10;# Run Jenkins container&#10;docker run -d -p 8080:8080 -p 50000:50000 \&#10;  --name jenkins \&#10;  -v /var/jenkins_home:/var/jenkins_home \&#10;  ${ecr_url}:latest" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Jenkinsfile">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/Jenkinsfile" />
+              <option name="originalContent" value="pipeline {&#10;  agent any&#10;  stages {&#10;    stage('Build') {&#10;      steps {&#10;        // Build the Maven project (Java backend)&#10;        sh 'mvn clean install'&#10;      }&#10;    }&#10;    stage('Trivy Scan') {&#10;      steps {&#10;        // Scan the workspace for vulnerabilities&#10;        sh 'trivy fs .'&#10;      }&#10;    }&#10;    stage('OWASP Dependency-Check') {&#10;      steps {&#10;        // Run OWASP Dependency-Check (adjust project name as needed)&#10;        sh 'dependency-check.sh --project DemoApp --scan .'&#10;      }&#10;    }&#10;  }&#10;}&#10;" />
+              <option name="updatedContent" value="pipeline {&#10;  agent any&#10;  stages {&#10;    stage('Build') {&#10;      steps {&#10;        // Build the Maven project (Java backend)&#10;        sh './mvnw clean install'&#10;      }&#10;    }&#10;    stage('Trivy Scan') {&#10;      steps {&#10;        // Scan the workspace for vulnerabilities&#10;        sh 'trivy fs .'&#10;      }&#10;    }&#10;    stage('OWASP Dependency-Check') {&#10;      steps {&#10;        // Run OWASP Dependency-Check (adjust project name as needed)&#10;        sh 'dependency-check.sh --project DemoApp --scan .'&#10;      }&#10;    }&#10;  }&#10;}&#10;" />
             </PendingDiffInfo>
           </value>
         </entry>
