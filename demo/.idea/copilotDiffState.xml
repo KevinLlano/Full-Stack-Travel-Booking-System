@@ -56,15 +56,6 @@
             </PendingDiffInfo>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/Jenkinsfile">
-          <value>
-            <PendingDiffInfo>
-              <option name="filePath" value="$PROJECT_DIR$/Jenkinsfile" />
-              <option name="originalContent" value="pipeline {&#10;  agent any&#10;  stages {&#10;    stage('Build') {&#10;      steps {&#10;        // Build the Maven project (Java backend)&#10;        sh 'mvn clean install'&#10;      }&#10;    }&#10;    stage('Trivy Scan') {&#10;      steps {&#10;        // Scan the workspace for vulnerabilities&#10;        sh 'trivy fs .'&#10;      }&#10;    }&#10;    stage('OWASP Dependency-Check') {&#10;      steps {&#10;        // Run OWASP Dependency-Check (adjust project name as needed)&#10;        sh 'dependency-check.sh --project DemoApp --scan .'&#10;      }&#10;    }&#10;  }&#10;}&#10;" />
-              <option name="updatedContent" value="pipeline {&#10;  agent any&#10;  stages {&#10;    stage('Build') {&#10;      steps {&#10;        // Build the Maven project (Java backend)&#10;        sh './mvnw clean install'&#10;      }&#10;    }&#10;    stage('Trivy Scan') {&#10;      steps {&#10;        // Scan the workspace for vulnerabilities&#10;        sh 'trivy fs .'&#10;      }&#10;    }&#10;    stage('OWASP Dependency-Check') {&#10;      steps {&#10;        // Run OWASP Dependency-Check (adjust project name as needed)&#10;        sh 'dependency-check.sh --project DemoApp --scan .'&#10;      }&#10;    }&#10;  }&#10;}&#10;" />
-            </PendingDiffInfo>
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/fix-foreign-keys.sql">
           <value>
             <PendingDiffInfo>

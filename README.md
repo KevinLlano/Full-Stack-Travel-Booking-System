@@ -242,7 +242,29 @@ travelapp/
 - **Models**: TypeScript interfaces matching backend DTOs
 - **Proxy**: Dev proxy routes `/api` requests to backend
 
----
+
+
+## 🚀 CI/CD & DevSecOps Pipeline
+
+This project implements an enterprise-grade, automated CI/CD pipeline using **Jenkins**, deployed on **AWS** via **Terraform** (Infrastructure as Code). The architecture focuses on security, immutable infrastructure, and cost-optimization.
+
+### 🛠️ Infrastructure & Cloud Architecture (AWS)
+* **Infrastructure as Code (IaC)**: Automated provisioning of cloud resources using **Terraform**.
+* **Compute (Cost-Optimized)**: Runs on an **Amazon EC2 t3.micro Spot Instance** to minimize cloud overhead while maintaining reliability.
+* **Container Registry**: Uses **Amazon ECR (Private)** to securely store the custom-built Jenkins Docker image.
+* **Secure Access Manager (No SSH)**: Utilizes **AWS Systems Manager (SSM) Session Manager** for secure, keyless CLI access, adhering to least-privilege IAM roles.
+
+### 🏗️ Pipeline as Code & Build Configuration
+* **Jenkins (Dockerized)**: A hardened, custom Jenkins Docker image is built and pulled dynamically from ECR (`jenkins/Dockerfile`). Plugins are strictly version-controlled via `plugins.txt`.
+* **Zero-Dependency Builds**: Utilizes the **Maven Wrapper** (`./mvnw`) inside the pipeline to ensure consistent, reproducible builds without requiring global binary installations on the host. 
+
+### 🛡️ Automated Security Scanning (DevSecOps)
+The pipeline is defined declaratively using a `Jenkinsfile` and integrates automated security tollgates prior to any deployment:
+1. **Build Stage**: Compiles the Java backend and runs automated tests.
+2. **Trivy Vulnerability Scan**: Deep scans the filesystem and dependencies for CVEs and configuration flaws.
+3. **OWASP Dependency-Check**: Analyzes the project's third-party dependencies (SCA) to prevent vulnerable libraries from reaching production.
+
+
 
 ## 🚀 Deployment
 

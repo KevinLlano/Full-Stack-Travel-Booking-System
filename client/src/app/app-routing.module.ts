@@ -13,19 +13,22 @@ import { OrderConfirmationComponent } from './views/order-confirmation/order-con
 
 const routes: Routes = [
   { path: '', redirectTo: '/vacation', pathMatch: 'full' },
-  {path: 'vacation', component: VacationComponent},
-  {path: 'vacation-detail/:vacationId', component: VacationDetailComponent},
-  {path: 'vacation/:vacationId/excursions', component: ExcursionComponent},
-  {path: 'vacation/:vacationId/excursions/:excursionId', component: ExcursionDetailComponent},
-  {path: 'customer', component: ViewCustomerComponent},
-  {path: 'customer/new', component: AddCustomerComponent},
-  {path: 'customer/:customerId', component: EditCustomerComponent},
-  {path: 'cart-summary', component: CartSummaryComponent},
-  {path: 'order-confirmation', component: OrderConfirmationComponent}
+  { path: 'vacation', component: VacationComponent },
+  { path: 'vacation-detail/:vacationId', component: VacationDetailComponent },
+  { path: 'vacation/:vacationId/excursions', component: ExcursionComponent },
+  {
+    path: 'vacation/:vacationId/excursions/:excursionId',
+    component: ExcursionDetailComponent,
+  },
+  { path: 'customer', component: ViewCustomerComponent },
+  { path: 'customer/new', component: AddCustomerComponent },
+  { path: 'customer/:customerId', component: EditCustomerComponent },
+  { path: 'cart-summary', component: CartSummaryComponent },
+  { path: 'order-confirmation', component: OrderConfirmationComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
