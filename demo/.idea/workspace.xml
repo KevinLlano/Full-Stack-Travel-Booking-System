@@ -5,38 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0eb69f4-c689-4e0e-9bd7-9d22f8be0ec0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../client/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilotDiffState.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/Bootstrap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/Bootstrap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/config/CorsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/config/RestDataConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/config/RestDataConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CheckoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CheckoutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CountryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CountryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController$CustomerDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController$CustomerDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController$DivisionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController$DivisionDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/DivisionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/DivisionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/ExcursionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/ExcursionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/VacationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/controllers/VacationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CartItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CartItemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CartRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CartRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CountryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CountryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/DivisionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/DivisionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/ExcursionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/ExcursionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/VacationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/dao/VacationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Cart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/CartItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/CartItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Country.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Country.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Division.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Division.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Excursion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Excursion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/StatusType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/StatusType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Vacation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/entities/Vacation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/services/CheckoutService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/services/CheckoutService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/assessment/demo/services/CheckoutServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/assessment/demo/services/CheckoutServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/terraform/scripts/run_jenkins_docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/terraform/scripts/run_jenkins_docker.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +26,8 @@
   <component name="CopilotUserSelectedModel">
     <selectedModels>
       <entry key="edit-panel" value="GPT-5 mini" />
-      <entry key="chat-panel" value="Gemini 3.1 Pro" />
-      <entry key="agent-panel" value="Gemini 3.1 Pro" />
+      <entry key="chat-panel" value="GPT-4.1" />
+      <entry key="agent-panel" value="GPT-4.1" />
     </selectedModels>
   </component>
   <component name="EmbeddingIndexingInfo">
@@ -231,7 +203,7 @@
       <workItem from="1775828097614" duration="11134000" />
       <workItem from="1775842095297" duration="49000" />
       <workItem from="1775842183277" duration="11258000" />
-      <workItem from="1775914125156" duration="4868000" />
+      <workItem from="1775914125156" duration="10012000" />
     </task>
     <servers />
   </component>

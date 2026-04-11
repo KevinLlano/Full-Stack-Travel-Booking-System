@@ -126,12 +126,18 @@ docker run -d --name redis-local -p 6379:6379 redis:latest
 ---
 
 ## 📸 Screenshots
-
 ![alt text](image-1.png)
 *Vacation browsing interface with Angular Material design*
 
 ![alt text](image-3.png)
 *AWS Lambda and SQS event-driven architecture*
+
+
+![alt text](image-4.png)
+DevSecOps Pipeline commit
+
+![alt text](image-5.png)
+Docker Container
 
 ---
 
